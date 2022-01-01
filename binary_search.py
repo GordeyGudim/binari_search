@@ -9,6 +9,6 @@ def binari_search(lis,item, lo, hi):
         return mid
     if guess < item:
         return binari_search(lis, item, lo = mid + 1, hi=hi)
-    if guess < item:
+    if guess > item:
         return binari_search(lis, item, lo = lo, hi = mid - 1)
 print(binari_search(mylist, number, low, hight))
