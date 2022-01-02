@@ -7,8 +7,11 @@ def binari_search(lis,item, lo, hi):
     guess = lis[mid]
     if guess == item:
         return mid
-    if guess < item:
-        return binari_search(lis, item, lo = mid + 1, hi=hi)
-    if guess > item:
-        return binari_search(lis, item, lo = lo, hi = mid - 1)
+    if low <= hight:
+        if guess < item:
+            return binari_search(lis, item, lo = mid + 1, hi=hi)
+        if guess > item:
+            return binari_search(lis, item, lo = lo, hi = mid - 1)
+    else:
+        return -1
 print(binari_search(mylist, number, low, hight))
