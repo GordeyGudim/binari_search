@@ -2,7 +2,7 @@ mylist = range(1, 6)
 number = int(input())
 low = 0
 hight = len(mylist)-1
-def binari_search(lis,item, lo, hi):
+def binary_search(lis,item, lo, hi):
     mid = (lo+hi)//2
     guess = lis[mid]
     if guess == item:
@@ -14,4 +14,4 @@ def binari_search(lis,item, lo, hi):
             return binari_search(lis, item, lo = lo, hi = mid - 1)
     else:
         return -1
-print(binari_search(mylist, number, low, hight))
+print(binary_search(mylist, number, low, hight))
