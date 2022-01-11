@@ -7,7 +7,7 @@ def binari_search(lis,item, lo, hi):
     guess = lis[mid]
     if guess == item:
         return mid
-    if low <= hight:
+    if lo <= hi:
         if guess < item:
             return binari_search(lis, item, lo = mid + 1, hi=hi)
         if guess > item:
